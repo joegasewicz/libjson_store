@@ -1,8 +1,32 @@
 # Lib JSON Store
 C library for file based storage using JSON.
 
-# Installation
+## Installation
+```bash
+git clone https://github.com/joegasewicz/libjson_store.git
+# Build
+make build
+# Move the archive & header files into you projects root
+mkdir your_project/lib && mv libjson_store/lib your_project/lib
+mv libjson_store/include your_project/include
+# If your project has a main.c file then run the following 
+gcc main.c -ljson_store -ljson-c -I include -L lib
+```
 
-# Usage
+## Setup
+```bash
+# If your project has a main.c file then run the following:
+gcc main.c -ljson_store -ljson-c -I include -L lib
+```
 
-# Building
+## Usage
+Create a JSON store & JSON file
+```c
+#include "json_store.h"
+
+int main(int argc, char** argv)
+{
+    JS_json_store_new();
+    return 0;
+}
+```
