@@ -1,4 +1,4 @@
-# Lib JSON Store
+# libjson store
 C library for file based storage using JSON.
 
 ## Installation
@@ -26,7 +26,8 @@ Create a JSON store & JSON file
 
 int main(int argc, char** argv)
 {
-    JS_json_store_new();
+    JS_Store *js_store = JS_json_store_new("example.JSON");
+    free(js_store); // Free the store memory
     return 0;
 }
 ```
